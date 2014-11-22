@@ -1,7 +1,7 @@
 Check That Cert!
 =============
 
-Unless you verify who are talking to, having an encrypted channel isn't useful. Not checking the SSL certificate of a remote server you are communicating with allows anyone with control of the network to stand up their own server and certificate, impersonating your server.
+Unless you verify who you are talking to, having an encrypted channel won't provide you confidentiality or integrity. Not checking the SSL certificate of a remote server you are communicating with allows anyone with control of the network to stand up their own server and certificate, impersonating your server.
 
 
 # Generating a self signed certificate
