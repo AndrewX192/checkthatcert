@@ -7,7 +7,7 @@ Unless you verify who are talking to, having an encrypted channel isn't useful. 
 # Generating a self signed certificate
 
 ````
-openssl genrsa -out privkey.pem 4096
+openssl genrsa -out server.pem 4096
 openssl req -new -x509 -key server.pem -out cert.pem -days 30
 ````
 
