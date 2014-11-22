@@ -25,3 +25,5 @@ openssl s_server -tls1 -tls1_1 -tls1_2 -key server.pem -cert cert.pem -www
 ## Issuer
 
 ## Valid from-to timestamps
+
+## Extended Key Use
