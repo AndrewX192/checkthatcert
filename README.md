@@ -16,3 +16,12 @@ openssl req -new -x509 -key server.pem -out cert.pem -days 30
 ````
 openssl s_server -tls1 -tls1_1 -tls1_2 -key server.pem -cert cert.pem -www
 ````
+
+
+# What needs verification?
+
+## Hostname
+
+## Issuer
+
+## Valid from-to timestamps
