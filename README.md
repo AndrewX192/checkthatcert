@@ -8,5 +8,11 @@ Unless you verify who are talking to, having an encrypted channel isn't useful. 
 
 ````
 openssl genrsa -out privkey.pem 4096
-openssl req -new -x509 -key server.pem -out cacert.pem -days 30
+openssl req -new -x509 -key server.pem -out cert.pem -days 30
+````
+
+## Hosting a simple server to test encrypted communication
+
+````
+openssl s_server -tls1 -tls1_1 -tls1_2 -key server.pem -cert cert.pem -www
 ````
