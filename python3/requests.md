@@ -1,6 +1,6 @@
 # Python3 requests
 
-Specify the certificate of the server you want to communicate with in cert.pem. cURL will only communicate with this server and will ignore the local certificate store.
+Specify the certificate of the server you want to communicate with in cert.pem. The requests library will only communicate with this server and will ignore the local certificate store.
 
 ````
 >>> import requests
