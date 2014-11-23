@@ -47,6 +47,8 @@ openssl s_server -tls1 -tls1_1 -tls1_2 -key server.pem -cert cert.pem -www
 
 ## Hostname
 
+The hostname (or CN) is a commonly accepted way of identifying the name of the system you are communicating with. In the event that an attacker redirects your traffic to another system trusted by client, validation of the hostname will prevent the transport from operating to the incorrect service.
+
 ## Issuer
 
 ## Valid from-to timestamps
@@ -57,7 +59,11 @@ openssl s_server -tls1 -tls1_1 -tls1_2 -key server.pem -cert cert.pem -www
 
 ## Not checking the certificate
 
+Failure to check the certificate means your client will communicate with any server using that transport. If you send secrets over the channel, it is trivial for an attacker with the ability to redirect network traffic to read them.
+
 ## Trusting more than the server you need to communicate with
+
+The more certificates and certificate authorities you trust, the higher the chance of your transport being intercepted. Limit the parties you trust and review them frequently to ensure you still trust them. 
 
 ## Not checking to see if the certificate is expired
 
