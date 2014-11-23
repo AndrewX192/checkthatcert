@@ -3,7 +3,6 @@ Check That Cert!
 
 Unless you verify who you are talking to, having an encrypted channel won't provide you confidentiality or integrity. Not checking the SSL certificate of a remote server you are communicating with allows anyone with control of the network to stand up their own server and certificate, impersonating your server.
 
-
 # Generating a self signed certificate
 
 ````
@@ -53,3 +52,13 @@ openssl s_server -tls1 -tls1_1 -tls1_2 -key server.pem -cert cert.pem -www
 ## Valid from-to timestamps
 
 ## Extended Key Use
+
+# Pitfalls to certificate validation
+
+## Not checking the certificate
+
+## Trusting more than the server you need to communicate with
+
+## Not checking to see if the certificate is expired
+
+## Not checking a certificate revocation list
