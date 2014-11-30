@@ -8,4 +8,16 @@ Specify the certificate of the server you want to communicate with in cert.pem. 
 >>> print(res)
 
 ````
+The following example will catch the error that results if the served certificate does not match the input pem file.
 
+````
+import requests
+try: 
+	res = requests.get('https://localhost:4433', verify='cert.pem')   
+# Catch exception if SSL certificate does not validate. 
+except requests.exceptions.SSLError:
+	print "The certificate failed verification."
+else:
+	print "The certificate passed verification."
+
+````
