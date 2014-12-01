@@ -18,3 +18,6 @@ curl_close($ch);
 
 ```
 
+## Error Handling
+
+In the event that the certificate presented by the server fails validation, the result "false" will be returned in place of $response. Your application must check the result of curl_exec() before using the response.
