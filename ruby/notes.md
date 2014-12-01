@@ -2,7 +2,7 @@
 
 This will check the certificate specified and the local truststore. Sites that have certificates in your trust store such as Google will always verify regardless of the cert specified.
 
-```
+``` ruby
 require "net/https"
 require "uri"
 ssltest = Net::HTTP.new("localhost", 4433)
