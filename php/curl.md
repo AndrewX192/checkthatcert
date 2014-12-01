@@ -2,7 +2,7 @@
 
 Specify the certificate of the server you want to communicate with in cert.pem. cURL will only communicate with this server and will ignore the local certificate store.
 
-```
+``` php
 <?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
