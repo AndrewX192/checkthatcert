@@ -55,6 +55,8 @@ The hostname (or CN) is a commonly accepted way of identifying the name of the s
 
 ## Issuer
 
+The Issuer is the name of the authority vouching for a certificate. It is important that this is bound to certificate that is present on the system and not simply a string comparison of the Subject name.
+
 ## Valid from-to timestamps
 
 ## Extended Key Use
