@@ -74,3 +74,7 @@ The more certificates and certificate authorities you trust, the higher the chan
 ## Not checking to see if the certificate is expired
 
 ## Not checking a certificate revocation list
+
+# Beyond Certificate Checking
+
+The scope of this project is currently to identify how to properly check the authenticity of the remote server. Future work includes identifying places where weaknesses exist within the TLS client implementation or configuration.
