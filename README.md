@@ -73,6 +73,8 @@ The more certificates and certificate authorities you trust, the higher the chan
 
 ## Not checking to see if the certificate is expired
 
+Certificates are intended to be live for a finite period of time. Having certificates expire ensures that systems will not trust the certificate forever if it is compromised, lost, or revoked.
+
 ## Not checking a certificate revocation list
 
 # Beyond Certificate Checking
