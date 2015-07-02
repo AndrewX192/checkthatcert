@@ -3,6 +3,8 @@ Check That Cert!
 
 Unless you verify who you are talking to, having an encrypted channel won't provide you confidentiality or integrity. Not checking the SSL certificate of a remote server you are communicating with allows anyone with control of the network to stand up their own server and certificate, impersonating your server.
 
+Check That Cert is an attempt to document usage of TLS libraries that perform correct certificate checking.
+
 # Self signed certificates vs certificates signed by a certificate authority
 
 Self signed certificates are certificates that are not signed by a trusted authority, in other words - no "trusted" third party has vouched for these certificates. These certificates should never be trusted without explicitly verifying that the certificate of the remote server is the server you intend to communicate with. Certificates signed by a certificate authority can be verified by ensuring that a trusted certificate authority signed that certificate. When you need to communicate with a specific server, you'll want to ensure that your client is set to only trust certificate the server is presenting, rather than any certificate signed by a certificate authority. When you have many users who will use standard software you do not have control of (for example, a web browser), you'll want to submit a certificate signing request to a certificate authority to obtain a proper certificate.
