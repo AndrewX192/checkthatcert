@@ -61,6 +61,8 @@ The Issuer is the name of the authority vouching for a certificate. It is import
 
 ## Valid from-to timestamps
 
+In order to ensure that a certificate isn't used beyond it's expiration, the valid-to timestamp should be verified against the machine's time. In order to prevent the system from trusting an expired certificate when the clock is wrong, the valid-from timestamp should be verified. Short lived certificates can reduce the chance of an attacker being able to use a certificate should they be able to compromise it. 
+
 ## Extended Key Use
 
 # Pitfalls to certificate validation
