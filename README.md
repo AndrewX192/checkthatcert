@@ -81,6 +81,8 @@ Certificates are intended to be live for a finite period of time. Having certifi
 
 ## Not checking a certificate revocation list
 
+In some cases, checking the CRL is a critical step to ensuring that the certificate should be trusted. This is particularly important for remote access software that uses client-certificates to perform authentication, and is less interesting for environments where a client uses a CRL to verify whether or not the server's certificate has expired, as an attacker can who can MiTM the SSL communication can also prevent the CRL from being downloaded and communication will continue as normal.
+
 # Beyond Certificate Checking
 
 The scope of this project is currently to identify how to properly check the authenticity of the remote server. Future work includes identifying places where weaknesses exist within the TLS client implementation or configuration.
