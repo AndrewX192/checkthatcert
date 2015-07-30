@@ -4,7 +4,6 @@
 <?php
 $options = array(
     'ssl' => array(
-        'CN_match' => 'localhost',
         'verify_peer' => true,
         'verify_peer_name' => true,
         'SNI_enabled' => true,
@@ -19,3 +18,5 @@ if ($result !== false) {
   echo $result;
 }
 ```
+
+Tested in PHP 5.6+
