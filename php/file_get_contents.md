@@ -1,5 +1,7 @@
 # PHP file_get_contents()
 
+Specify the certificate of the server you want to communicate with in cert.pem.
+
 ``` php
 <?php
 $options = array(
@@ -19,4 +21,13 @@ if ($result !== false) {
 }
 ```
 
-Tested in PHP 5.6+
+## PHP 5.5 Notes
+
+Tested on PHP 5.5.26 (cli) (built: Jun 11 2015 08:23:07) 
+
+### Certificate Validation is not default
+
+$ php -r 'echo file_get_contents("https://localhost:4433");'
+<HTML><BODY BGCOLOR="#ffffff">
+
+###
