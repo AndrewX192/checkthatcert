@@ -6,3 +6,6 @@ Specify the certificate of the server you want to communicate with in cert.pem. 
 $ curl https://localhost:4433/index.html --cacert cert.pem
 ````
 
+## What's been tested
+
+* Hostname verification
