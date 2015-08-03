@@ -16,7 +16,7 @@ OpenSSL does not do any hostname verification. Even if the issuer is verified, a
 
 ## Verify functionality does not close the connection
 
-This is actually a known bug in s_client:
+By default, the -verify method does not abort the connection. This means that if a caller does not explicitly check the output of s_client before transmitting or accepting data from s_client the application will be subject to MiTM. This is actually a known bug in s_client:
 
 ````
 BUGS
@@ -25,3 +25,4 @@ BUGS
 
        The -verify option should really exit if the server verification fails.
 ````
+
