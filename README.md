@@ -1,9 +1,9 @@
 Check That Cert!
 =============
 
-Unless you verify who you are talking to, having an encrypted channel won't provide you confidentiality or integrity. Not checking the SSL certificate of a remote server you are communicating with allows anyone with control of the network to stand up their own server and certificate, impersonating your server.
+Unless you verify who you are communicating with, using an encrypted channel won't provide you confidentiality or integrity. Not checking the SSL certificate of a remote server you are communicating with allows anyone with control of the network to stand up their own server and certificate, impersonating the server and subjecting the application to a MiTM attack.
 
-Check That Cert is an attempt to document usage of TLS libraries that perform correct certificate checking.
+Check That Cert is an attempt to document correct usage of TLS libraries that perform certificate checking.
 
 # Self signed certificates vs certificates signed by a certificate authority
 
