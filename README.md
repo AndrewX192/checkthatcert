@@ -90,3 +90,7 @@ In some cases, checking the CRL is a critical step to ensuring that the certific
 # Beyond Certificate Checking
 
 The scope of this project is currently to identify how to properly check the authenticity of the remote server. Future work includes identifying places where weaknesses exist within the TLS client implementation or configuration.
+
+# Additional Resources
+
+The paper "The most dangerous code in the world: validating SSL certificates in non-browser software" from the Stanford Crypto Group provides some valuable background information on certificate validation and was a motivation for this project.
