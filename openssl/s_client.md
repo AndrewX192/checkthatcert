@@ -4,6 +4,8 @@ s_client is a SSL/TLS command line client provided by OpenSSL.
 
 # Problems
 
+Users of s_client will run into a number of issues getting certificate validation to work. This client should probably be rewritten while trying to preserve as much of the original functionality as possible.
+
 ## Issuer verification
 
 OpenSSL does not perform issuer verification by default. Providing a list of certificate authorities to s_client does not resolve this issue as OpenSSL does not abort the connection if verification fails.
