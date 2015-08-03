@@ -44,6 +44,8 @@ Email Address []:someone@example.com
 [user@localhost testcase]$ 
 ````
 
+Pay special attention when setting the "hostname" or "Common Name" field. This must match the hostname of the server you are communicating with. You should only use hostnames that you control to ensure that you are the only one who can issue a certificate that will be trusted by your software.
+
 ## Hosting a simple server to test encrypted communication
 
 ````
