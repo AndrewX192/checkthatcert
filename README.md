@@ -11,7 +11,7 @@ Self signed certificates are certificates that are not signed by a trusted autho
 
 # Generating a self signed certificate
 
-While manging PKI is out of scope for Check That Cert, self-signed certificates often fufill the needs of application developers. If you only nede to communicate with one server that you already control (and nobody else needs to communicate with) you should create a self signed certificate. This can be done with the openssl utilities, included with Linux and available on windows with cygwin.
+While manging PKI is out of scope for Check That Cert, self-signed certificates often fulfill the needs of application developers. If you only need to communicate with one server that you already control (and nobody else needs to communicate with) you should create a self signed certificate. This can be done with the openssl utilities, included with Linux and available on windows with cygwin.
 
 ````
 openssl genrsa -out server.pem 4096
