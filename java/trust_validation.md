@@ -27,7 +27,7 @@ In this example I will use 'localhost.pem'.
 The following command will create a new key store and import the downloaded certificate.
 This uses the 'keytool' application, which is bundled with the JRE.
 ```
-keytool -import -alias localhsot -file localhost.pem -keystore keystore.jks
+keytool -import -alias localhost -file localhost.pem -keystore keystore.jks
 ```
 When creating a new keystore you will be prompted to create a password.
 For existing keystores you will be prompted to enter the password.
