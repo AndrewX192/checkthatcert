@@ -13,21 +13,13 @@ and is also technically simpler.
 The steps to trust a certificate are:
 
 ### 1. Acquire the certificate
-If your application is talking to an HTTPS server, the simplest way to get a copy of the certificate is through a web browser.
-The following instructions are for Google Chrome, but the process is very similar in other browsers.
-
-First go to the site in question. The browser will probably give you a certificate warning too, but in this situation
-that is not important as long as you are sure you can trust the certificate you are being served.
-Click on the padlock in the address bar and select 'Certificate information' under the connection tab.
-Click the 'Details' tab.
-Click 'Export...' and save the certificate with a name related to the application.
-In this example I will use 'localhost.pem'.
+See checkthatcert/general/getting_started.md for details on how to do this.
 
 ### 2. Add it to a key store
 The following command will create a new key store and import the downloaded certificate.
 This uses the 'keytool' application, which is bundled with the JRE.
 ```
-keytool -import -alias localhost -file localhost.pem -keystore keystore.jks
+keytool -import -alias example.com -file example.com.pem -keystore keystore.jks
 ```
 When creating a new keystore you will be prompted to create a password.
 For existing keystores you will be prompted to enter the password.
