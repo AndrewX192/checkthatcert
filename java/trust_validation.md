@@ -31,9 +31,8 @@ To use this keystore in your application run it with the following VM option:
 -Djavax.net.ssl.trustStore=keystore.jks
 ```
 
-### How NOT to handle untrusted certificates
-The dangerous approach to handling untrusted certificates is to not perform trust validation at all,
-which can be done by implementing javax.net.ssl.TrustManager. Sometimes people do this with the intention of only
-skipping validation while testing, however as it involves changing code it then ends up in production too.
-As it does not leave anything obviously broken this kind of change can go unnoticed quite easily,
-but it will leave the application completely unprotected against man in the middle attacks.
+### How NOT to handle untrusted certificates in Java
+It is possible to instruct Java to skip trust validation entirely. This is a dangerous practice and is non-trivial.
+It involves providing a custom implementation of javax.net.ssl.X509TrustManager which does not perform any validation.
+There are many tutorials that show how to do this, but doing so will leave the application vulnerable to man in the
+middle attacks.
