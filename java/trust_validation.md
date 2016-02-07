@@ -1,5 +1,5 @@
 # How to handle untrusted certificates
-One common problem you may come across is that the server presents a certificate that is not trusted by the Java.
+One common problem you may come across is that the server presents a certificate that is not trusted by Java.
 This will manifest itself with an error like the following:
 ```
 sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
