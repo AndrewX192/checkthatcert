@@ -32,7 +32,6 @@ To use this keystore in your application run it with the following VM option:
 ```
 
 ### How NOT to handle untrusted certificates in Java
-It is possible to instruct Java to skip trust validation entirely. This is a dangerous practice and is non-trivial.
-It involves providing a custom implementation of javax.net.ssl.X509TrustManager which does not perform any validation.
+It is possible to instruct Java to skip trust validation entirely. This can be done by providing a custom implementation of javax.net.ssl.X509TrustManager which does not perform any validation.
 There are many tutorials that show how to do this, but doing so will leave the application vulnerable to man in the
-middle attacks.
+middle attacks, as an attacker could present a self signed certificate to the client.
