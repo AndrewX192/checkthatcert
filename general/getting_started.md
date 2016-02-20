@@ -20,10 +20,16 @@ The following command shows the certificate for https://www.example.com
 ```
 openssl s_client -connect www.example.com:443
 ```
+
 The certificate starts '-----BEGIN CERTIFICATE-----' and ends with '-----END CERTIFICATE-----'. You can either copy
 and paste it from there, including the 'BEGIN' and 'END' lines, or dump it do a file using a command like the following:
 ```
 openssl s_client -connect www.example.com:443 < /dev/null | openssl x509 -outform pem > example.com.pem
+```
+
+For protocols other than HTTP, the communication may begin in plaintext and then switch to TLS after a STARTTLS command is issued. The following example shows how to view the certificate in such a situation, in this case for a server using the XMPP protocol.
+```
+openssl s_client -connect jabber.example.com:5222 -starttls xmpp
 ```
 
 # Testing
